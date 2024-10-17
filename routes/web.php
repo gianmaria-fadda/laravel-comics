@@ -56,7 +56,8 @@ Route::get('/', function () {
             'name' => 'SHOP',
             'current' => false
         ]
-    ]
+    ];
+    $comics = config('comics');
 
-    return view('welcome');
-});
+    return view('pages.welcome', compact('menuLinks', 'comics'));
+})->name('homePage');
