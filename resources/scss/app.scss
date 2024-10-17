@@ -3,16 +3,74 @@
 @import "./partials/variables";
 @import "./partials/mixins";
 
-main {
-    background-color: lightcoral;
-}
+footer {
 
-.gatto-img {
-    height: 200px;
-}
+  .container:first-child {
+    background-image: url(../assets/img/footer-bg.jpg);
+    @include flex-rule-and-around;
 
-.gatto-bg {
-    height: 200px;
-    background-image: url('../img/gatto.webp');
-    background-size: contain;
+    .list {
+      @include flex-rule;
+
+      .col {
+        padding-top: 40px;
+
+        h3 {
+          color: white;
+          padding: 15px 20px;
+        }
+
+        ul {
+          padding-left: 0;
+
+          li {
+            @include list-none;
+            padding: 1px 20px;
+            color: #818181;
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+
+    .row {
+      img {
+        width: 350px;
+        object-fit: contain;
+      }
+    }
+  }
+  .container:last-child {
+    @include flex-rule-and-around;
+    align-items: center;
+    max-height: 100vh;
+    background-color: #303030;
+
+    div:first-child {
+      margin: 45px 0;
+
+      p {
+        font-weight: bold;
+        padding: 15px;
+        border: 1px solid #0282F9;
+        color: white;
+      }
+    }
+
+    div:last-child {
+      @include flex-rule;
+      align-items: center;
+
+      p {
+        font-weight: bold;
+        color: #0282F9;
+        padding: 0 10px;
+      }
+
+      img {
+        width: 35px;
+        margin: 0 10px;
+      }
+    }
+  }
 }

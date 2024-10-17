@@ -1,0 +1,20 @@
+@mixin flex-rule {
+    display: flex;
+}
+
+@mixin flex-rule-and-around {
+    display: flex;
+    justify-content: space-around;
+}  
+
+@mixin white-color-rule {
+    color: white;
+}
+
+@mixin blue-color-rule {
+    background-color: #0282F9;
+}
+
+@mixin list-none {
+    list-style: none;
+}
