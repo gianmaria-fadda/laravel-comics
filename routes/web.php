@@ -79,7 +79,116 @@ Route::get('/', function () {
             'image' => 'buy-dc-power-visa.svg'
         ],
     ];
+    $linkFirst = [
+        [
+            'name' => 'Character',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Comics',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Movies',
+            'link' => '#'
+        ],
+        [
+            'name' => 'TV',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Games',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Videos',
+            'link' => '#'
+        ],
+        [
+            'name' => 'News',
+            'link' => '#'
+        ]
+    ];
+    $linkSecond = [
+        [
+            'name' => 'Shop DC',
+            'link' => '#'
+        ],
+        
+        [
+            'name' => 'Shop DC Collectibles',
+            'link' => '#'
+        ]
+    ];
+    $linkThird = [
+        [
+            'name' => 'Term of Use',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Privacy Policy (New)',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Ad Choise',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Adversting',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Jobs',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Subscription',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Talent Workshop',
+            'link' => '#'
+        ],
+        [
+            'name' => 'CPSC Certificates',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Ratings',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Shop Help',
+            'link' => '#'
+        ],
+        [
+            'name' => 'Contact Us',
+            'link' => '#'
+        ]
+    ];
+    $linkFourth = [  
+        [
+            'name' => 'DC',
+            'link' => '#'
+        ],
+        [
+            'name' => 'MAD Magazine',
+            'link' => '#'
+        ],
+        [
+            'name' => 'DC Kids',
+            'link' => '#'
+        ],
+        [
+            'name' => 'DC Univerce',
+            'link' => '#'
+        ],
+        [
+            'name' => 'DC Power Visa',
+            'link' => '#'
+        ]
+    ];
     $comics = config('comics');
 
-    return view('pages.welcome', compact('menuLinks', 'comics', 'menuItems'));
+    return view('pages.welcome', compact('menuLinks', 'comics', 'menuItems', 'linkFirst', 'linkSecond', 'linkThird', 'linkFourth'));
 })->name('homePage');
