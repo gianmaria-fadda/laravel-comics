@@ -3,6 +3,44 @@
 @import "./partials/variables";
 @import "./partials/mixins";
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:not(ul):not(ol) {
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  nav {
+    @include flex-rule-and-around;
+    img {
+      width: 80px;
+      padding: 20px 0;
+      object-fit: contain;
+    }
+    ul {
+      @include list-none;
+      @include flex-rule;
+      align-items: center;
+      li {
+        padding: 0 15px;
+        font-weight: bold;
+        opacity: .7;
+      }
+    }
+  }
+}
+
 footer {
 
   .container:first-child {
